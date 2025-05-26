@@ -8,14 +8,13 @@ import Loginpage from './pages/Loginpage'
 import NotFound from './pages/NotFound'
 import Messaging from './pages/Messaging'
 import Registerpage from './pages/Registerpage'
-import Navbar from './components/navbar'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <Navbar/>
       <Routes>
         <Route path='/' element={<Homepage/>} />
         <Route path='/Loginpage/' element={<Loginpage/>} />

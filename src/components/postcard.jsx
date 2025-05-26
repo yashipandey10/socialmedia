@@ -1,11 +1,14 @@
 
-import {Avatar, Card, Container, HStack, IconButton, Separator,Text} from "@chakra-ui/react"
+import {Avatar, Card, Container, HStack, IconButton, Separator,Text,Icon} from "@chakra-ui/react"
 import { useState } from "react";
 
-import { FaRegThumbsUp,FaRegThumbsDown,FaThumbsUp,FaThumbsDown } from "react-icons/fa";
+import { FaRegThumbsUp,FaRegThumbsDown,FaThumbsUp,FaThumbsDown  } from "react-icons/fa";
+import { GrFormView  } from "react-icons/gr";
+
 function PostCard({post}){
 
     const[liked,setLiked] = useState('unliked')
+console.log("Post Data:", {post});
 
     function setLikeState (LikeState,button){
         switch(LikeState){
@@ -36,7 +39,9 @@ function PostCard({post}){
         }
     }
     return(
-        <Container marginBottom={5} shadow={"md"} maxW={"1/3"} paddingX={0} >
+        
+        <Container marginBottom={5} marginStart={"0"} marginEnd={{base: "0" ,md:"10", lg:"10"}}  shadow={"md"} maxW={{base:"8/9",md:"2/4" ,lg:"3/5"}} padding={0} >
+            
             <Card.Root>
               <Card.Body>
                  <HStack>
@@ -61,7 +66,7 @@ function PostCard({post}){
                 </Container>
                 <Separator>
                     <HStack spacing={6}>
-            <HStack spacing={1}>
+            <HStack gapX={"2.5"}>
                 {
                     liked === 'liked'
                      ?
@@ -75,7 +80,7 @@ function PostCard({post}){
                 } 
                   <Text fontSize="sm">{post.reactions.likes}</Text>
             </HStack>
-            <HStack spacing={1}>
+            <HStack gapX={"2.5"}>
                {
                     liked === 'disliked' 
                     ?
@@ -87,13 +92,23 @@ function PostCard({post}){
                         <FaRegThumbsDown />
                     </IconButton>
                 } 
+                               
               <Text fontSize="sm">{post.reactions.dislikes}</Text>
+            </HStack>
+            <HStack >
+                 <Icon variant={'ghost'} rounded='full' size={"2xl"} >
+                    <GrFormView  /> 
+
+                 </Icon>
+                                       <Text fontSize="sm">{post.views}</Text>
             </HStack>
           </HStack>
                 </Separator>
               </Card.Body>
             </Card.Root>
         </Container>
+
     )
+    
 }
 export default PostCard;
