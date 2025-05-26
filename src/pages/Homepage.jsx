@@ -17,13 +17,11 @@ function Homepage() {
   useEffect(()=>{getPosts();},[])
 
   return (
-    <>
-      <Navbar/>
-      
+ <>
+<Navbar/>   
 <Flex>
-
 {
-      <Sidebar/>
+ <Sidebar/>
 }
 <Container marginTop={40}>
 <Stack>
