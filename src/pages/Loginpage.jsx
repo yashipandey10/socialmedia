@@ -4,7 +4,6 @@ import { useNavigate } from "react-router";
 import NotFound from './NotFound';
 import { FcGoogle } from "react-icons/fc";
 import { MdFacebook } from "react-icons/md";
-import loginpage from '../assets/loginpage.webp'
 
 function Loginpage() {
     const [email, setEmail] = useState('');
@@ -29,13 +28,13 @@ function Loginpage() {
     };
 
     return (
-
-        
-    
         <Container width="100vw" height="100vh" display="flex" flexDirection="row" padding="0" margin="0">
             {/* <Center marginTop={20}> */}
             <Container flex="1" display="flex" justifyContent="center" alignItems="center" margin="0" gap="0">
-                    <Card.Root marginTop={0} width="100%" maxW="400px">
+            <Card.Root marginTop={0} width="100%" maxW="400px">
+                  <Center marginTop={20}>
+                    <Card.Root>
+
                         <Card.Body padding={6} shadow="lg">
                             <Container padding={'10'}>
                                 <Text fontWeight={'bolder'} fontSize={'larger'} textAlign={'left'}>Log in to your Account</Text>
@@ -63,17 +62,14 @@ function Loginpage() {
                                     </Text>
                                 </Center>
                             </Container>
-                            
-
                         </Card.Body>
                     </Card.Root>
-                {/* </Center> */}
-            </Container>                
-             <Container flex="1" height="100vh" padding="0" margin="0">
-                    <img src={loginpage} alt="loading..."  style={{ width: '50%', height: '50%', objectFit: 'cover', display:'block' }} />
-            </Container>
-        </Container>  
-    )
+                 </Center>
+              </Card.Root>  
+                
+             </Container>   
+              </Container>  
+         )
 }
 
 
