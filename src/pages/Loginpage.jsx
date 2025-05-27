@@ -39,18 +39,20 @@ function Loginpage() {
 {/* {
         <Navbar/>
     } */}
-    <Stack>
+    <Stack  position="relative" width="100%" height="100vh" overflow="hidden" >
         {
-        <Center marginTop={10} marginBottom={0}>
+        <Center marginTop={10} marginBottom={0} position={'relative'} zIndex={1}>
             <Card.Root>
                 <Card.Body padding={4} shadow="lg">
                     <Container padding={'10'}>
-                        <IconButton color={'black'} variant={'ghost'} margin={4}  > <GiTreeDoor size={10} /></IconButton>   
-                        
-                        <Text fontWeight={'bolder'} fontSize={'larger'} textAlign={'left'}>
+                        <Flex>
+                        <Text fontWeight={'bold'} color={'black'} padding={'2'} fontSize={'xl'} marginStart={16}>EcoNet </Text> 
+                        <IconButton color={'black'} variant={'ghost'}   >  <GiTreeDoor size={10} /></IconButton>   
+                        </Flex>
+                        {/* <Text fontWeight={'bolder'} fontSize={'larger'} textAlign={'left'}>
                             Log in to your Account
-                        </Text>
-                        <Text color={'blackAlpha.800'} fontSize={'1rem'} textAlign={'left'}>
+                        </Text> */}
+                        <Text color={'blackAlpha.800'} fontSize={'1.4rem'} fontWeight={'bolder'} textAlign={'center'}>
                             Welcome back! 
                         </Text>
                         <Container height={5} />
@@ -73,7 +75,7 @@ function Loginpage() {
                         </HStack>
                         <HStack marginBottom={5}>
                             <Button size={'lg'} width={'100%'} backgroundColor={'green.700'} fontSize={'1rem'} onClick={handleLogin}>
-                                Sign In
+                                Log In
                             </Button>
                         </HStack>
                         <Center>
@@ -90,10 +92,10 @@ function Loginpage() {
         </Center>
 }
         {
-            <Container marginStart={0} marginBottom={0} marginEnd={0} marginTop={0}  padding={0} maxW="100vw" >
+            <Container marginStart={0} marginBottom={0} marginEnd={0} marginTop={0}  padding={0} maxW="100vw"  position={'relative'} >
             
                 
-                <Image  objectFit={'fill'}  width={'100%'} height={'20%'} src={image}/>
+                <Image  objectFit={'fill'}  width={'100%'} height={'88%'} src={image} />
 
             </Container>
         }

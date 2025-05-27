@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 import { Card, Center, Container, Text, Input, Button, HStack } from "@chakra-ui/react"
 import { useNavigate } from 'react-router';
 
@@ -31,13 +31,15 @@ function Registerpage() {
         alert('Registration successful!');
         navigate('/loginpage');
     };
+   
 
     return (
-        <Center marginTop={'14'}>
+       <div >
+        <Center marginTop={'20'}  >
             <Card.Root>
                 <Card.Body padding={5} shadow={'lg'}>
                     <Text fontWeight={'bolder'} fontSize={'3xl'} textAlign={'center'}>Create Account</Text>
-                    <Text fontWeight={'light'} color={'grey.500'} fontSize={'small'} textAlign={'center'}>Join Us Today!</Text>
+                    <Text fontWeight={'bold'} color={'grey.500'} fontSize={'small'} textAlign={'center'}>Join Us Today!</Text>
                     <Container height={5} />
                     <HStack marginBottom={5}>
                         <Container>
@@ -79,6 +81,7 @@ function Registerpage() {
                 </Card.Body>
             </Card.Root>
         </Center>
+ </div>
     )
 }
 
