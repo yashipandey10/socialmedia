@@ -1,6 +1,6 @@
 import {useState,useEffect} from "react";
 import PostCard from "../components/postcard";
-import Navbar from '../components/navbar'
+ import Navbar from '../components/navbar'
 import Sidebar from '../components/sidebar'
 import {Flex,Stack,Container} from "@chakra-ui/react";
 import axios from 'axios'

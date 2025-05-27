@@ -4,7 +4,7 @@ import { NavLink } from 'react-router';
 function Sidebar(){
       const [showSidebar, setShowSidebar] = useState(false);
     return (
-         <Container maxW="container.md" p={4}>
+         <Container maxW={{base:10 ,md:10 ,lg:10}} marginStart={0} marginEnd={10} >
       <Button
         display={{ base: "block", md: "none" }}
         mb={4}
@@ -18,6 +18,9 @@ function Sidebar(){
         display={{ base: showSidebar ? "block" : "none", md: "block" }}
         bg={{ base: "gray.100", md: "transparent" }}
         p={2}
+        position="sticky"
+        top="20"
+        zIndex="sticky"
         borderRadius="md"
       >
         <Text fontWeight="bold" mb={2}>Sidebar</Text>
