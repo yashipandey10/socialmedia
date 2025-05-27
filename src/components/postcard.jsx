@@ -50,8 +50,8 @@ console.log("Post Data:", {post});
                         <Avatar.Image src="https://bit.ly/sage-adebayo"/>
                     </Avatar.Root>
                     <Container padding={0}>
-                        <Text fontWeigth={'bold'} fontSize={'smaller'}>user</Text>
-                        <Text fontWeigth={'bold'} fontSize={'x-small'} color={'gray'}>@username</Text>
+                        <Text fontWeight={'bold'} fontSize={'smaller'}>user</Text>
+                        <Text fontWeight={'bold'} fontSize={'x-small'} color={'gray'}>@username</Text>
                     </Container>
                      </HStack>
                      <Container heigth={3} />
@@ -60,7 +60,7 @@ console.log("Post Data:", {post});
                     {post.title}
                   </Text>
                   <Container heigth={1} />
-                  <Text color={'gray.600'} fontWeigth={'light'} fontSize={'small'}>
+                  <Text color={'gray.600'} fontWeight={'light'} fontSize={'small'}>
                     {post.body}
                   </Text>
                 </Container>
