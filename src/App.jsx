@@ -5,6 +5,7 @@ import NotFound from './pages/NotFound';
 import Messaging from './pages/Messaging';
 import Registerpage from './pages/Registerpage';
 import ProtectedRoute from './utiles/ProtectedRoute';
+import Profilepage from './pages/Profilepage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       </Route>
     <Route path="/loginpage" element={<Loginpage />} />
       <Route path="/registerpage" element={<Registerpage />} />
+      <Route path="/profilepage" element={<Profilepage />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

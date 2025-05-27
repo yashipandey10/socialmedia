@@ -29,6 +29,7 @@ function Sidebar(){
         <NavLink to="/" style={{ color: "#008009", marginRight: "1rem", marginleft: "0"}} fontWeight="bold" >Home</NavLink>
         <NavLink to="/Loginpage" style={{ color: "#008009" , marginRight: "1rem"}} fontWeight="bold">Login</NavLink>
         <NavLink to="/Registerpage" style={{ color: "#008009", marginRight: "1rem"}} fontWeight="bold">Register</NavLink>
+        <NavLink to="/Profilepage" style={{ color: "#008009", marginRight: "1rem"}} fontWeight="bold">Profile</NavLink>
         </Stack>
         <Box bg="black.900"  borderRadius="md">
 
