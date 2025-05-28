@@ -23,9 +23,9 @@ function Sidebar({ onShowPopular ,onShowAll }){
     };
 
   return (
-    <Container maxW="fit-content" p={0} >
+    <Container maxW="fit-content" p={0} marginEnd={{base:'0'}} >
       <Box
-            w={{ base: "10rem", md: "250px", lg: "20rem" }} display={{base:'none',lg:'flow'}} bg="#255342" color="white" p={5} minH="100vh" position="fixed" left={0} top={'5rem'} zIndex={1000}
+            w={{ base: "10rem", md: "250px", lg: "20rem" }} display={{base:'none',lg:'flow'}} bg="#255342"  color="white" p={5} minH="100vh" position="fixed" left={0} top={'5rem'} zIndex={1000}
       >
         <VStack spacing={'4'} align="stretch">
            

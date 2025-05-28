@@ -1,5 +1,5 @@
 import { useState , useEffect } from 'react';
-import { Card, Center, Container, Text, Input, Button, HStack ,Flex,IconButton} from "@chakra-ui/react"
+import { Card, Center, Container, Text, Input, Button, HStack ,Flex,IconButton,Box} from "@chakra-ui/react"
 import { useNavigate } from 'react-router';
 import { GiTreeDoor } from "react-icons/gi";
 
@@ -45,14 +45,14 @@ function Registerpage() {
 
 
     return (
-       <div style={{ backgroundColor: '#1b262c', minHeight: '100vh'  }} margin={'0'} padding={'0'}>
-        <Center padding={'10rem'}  >
-            <Card.Root>
+       <Box style={{ backgroundColor: '#1b262c', minHeight: '100vh'  }} margin={'0'} padding={'0'}  py={{ base: 10, md: 20 }}>
+        <Center padding={'3'}  >
+            <Card.Root w={{ base: '100%', md: '80%', lg: '40%' }}>
                 <Card.Body padding={5} shadow={'lg'}>
                     <Center>
                      <Flex>
-                             <Text fontWeight={'bold'} color={'black'} padding={'2'} fontSize={'xl'} >EcoNet </Text> 
-                             <IconButton color={'black'} variant={'ghost'}   >  <GiTreeDoor size={10} /></IconButton>   
+                             <Text fontWeight={'bold'} color={'black'} padding={'2'} fontSize={'3rem'} >EcoNet </Text> 
+                             <IconButton color={'black'} variant={'ghost'}  marginTop={6} >  <GiTreeDoor size="40px"   /></IconButton>   
                     </Flex>                      
                     </Center>
                     <Text fontWeight={'bolder'} color={'grey.500'} fontSize={'medium'} textAlign={'center'}>Connect. Act. Sustain!</Text>
@@ -97,7 +97,7 @@ function Registerpage() {
                 </Card.Body>
             </Card.Root>
         </Center>
- </div>
+ </Box>
     )
 }
 
