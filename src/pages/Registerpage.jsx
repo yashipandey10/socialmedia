@@ -45,7 +45,7 @@ function Registerpage() {
                              <IconButton color={'black'} variant={'ghost'}   >  <GiTreeDoor size={10} /></IconButton>   
                     </Flex>                      
                     </Center>
-                    <Text fontWeight={'bolder'} color={'grey.500'} fontSize={'medium'} textAlign={'center'} >Connect. Act. Sustain!</Text>
+                    <Text fontWeight={'bolder'} color={'grey.500'} fontSize={'medium'} textAlign={'center'}>Connect. Act. Sustain!</Text>
                     <Container height={5} />
                     <HStack marginBottom={5}>
                         <Container>

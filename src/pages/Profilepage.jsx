@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Box, Button, Center, Text, Avatar, Container, Flex, VStack } from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useParams } from 'react-router-dom';
 
 function Profilepage() {
+    
     const navigate = useNavigate();
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     const user = JSON.parse(localStorage.getItem('user'));
-
+    const { username } = useParams();
     if (!isLoggedIn || !user) {
         navigate('/loginpage');
         return null;
@@ -35,7 +36,7 @@ function Profilepage() {
                     <VStack align="start" spacing={4}>
                         <Box w="100%">
                             <Text fontWeight="bold" fontSize="2xl">
-                                Information
+                                User Details
                             </Text>
                             <hr />
                             <Flex gap={"8"} mb={"4"} mt={"4"} >

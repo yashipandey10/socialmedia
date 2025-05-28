@@ -40,7 +40,7 @@ console.log("Post Data:", {post});
     }
     return(
         
-        <Container marginBottom={5} marginStart={"0"} marginEnd={{base: "0" ,md:"10", lg:"10"}}  shadow={"md"} maxW={{base:"8/9",md:"2/4" ,lg:"3/5"}} padding={0} >
+        <Container marginBottom={5} marginStart={{ base:"3", md:"16" , lg:"48"}} marginEnd={{base: "3" }}  shadow={"md"} maxW={{base:"4/5",md:"2/5" ,lg:"3/5"}} padding={0} >
             
             <Card.Root>
               <Card.Body>
