@@ -17,20 +17,22 @@ function Loginpage() {
     const from = location.state?.from || '/';
 
     const handleLogin = () => {
-        const storedUser = JSON.parse(localStorage.getItem('user'));
+        const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
 
-        if (!storedUser) {
-            alert('No user found. Please register first.');
-            return;
-        }
+    const matchedUser = storedUsers.find(
+        user => user.email === email && user.password === password
+    );
 
-        if (email === storedUser.email && password === storedUser.password) {
-            localStorage.setItem('isLoggedIn', true);
-            alert('Login successful!');
-            navigate(from, { replace: true }); 
-        } else {
-            alert('Invalid credentials.');
-        }
+    if (!matchedUser) {
+        alert('Invalid credentials or user not found.');
+        return;
+    }
+
+    localStorage.setItem('isLoggedIn', true);
+    localStorage.setItem('currentUser', JSON.stringify(matchedUser));
+
+    alert('Login successful!');
+    navigate(from, { replace: true });
     };
 
     return (

@@ -7,10 +7,19 @@ import { CgProfile } from "react-icons/cg";
 import { IoLogInOutline } from "react-icons/io5";
 import { SiGnuprivacyguard } from "react-icons/si";
 import { LuSquareMenu } from "react-icons/lu";
+import {  useNavigate } from "react-router-dom"; 
 
 import {useState} from "react";
 function Sidebar({ onShowPopular ,onShowAll }){
   
+
+
+  const handleLogout = () => {
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('currentUser');
+        alert("Logging out!");
+        navigate('/loginpage');
+    };
 
   return (
     <Container maxW="fit-content" p={0} >
@@ -55,7 +64,7 @@ function Sidebar({ onShowPopular ,onShowAll }){
 </Button>
 
 
-<Button backgroundColor="#006f5e" color="#def8d6" variant="solid" w="275px" display="flex" alignItems="center" gap={2}>
+<Button backgroundColor="#006f5e" color="#def8d6" variant="solid" w="275px" display="flex" alignItems="center" gap={2} onClick={handleLogout}>
   <Icon as={TbLogout2} />
   Logout
 </Button>
