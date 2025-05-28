@@ -9,6 +9,14 @@ import { SiGnuprivacyguard } from "react-icons/si";
 import { GiTreeDoor } from "react-icons/gi";
 
 function Sidebar({ onShowPopular ,onShowAll }){
+
+  const handleLogout = () => {
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('currentUser');
+        alert("Logging out!");
+        navigate('/loginpage');
+    };
+
   return (
     <Container maxW="fit-content" p={0} >
       <Box
@@ -52,7 +60,7 @@ function Sidebar({ onShowPopular ,onShowAll }){
 </Button>
 
 
-<Button backgroundColor="#006f5e" color="#def8d6" variant="solid" w="275px" display="flex" alignItems="center" gap={2}>
+<Button backgroundColor="#006f5e" color="#def8d6" variant="solid" w="275px" display="flex" alignItems="center" gap={2} onClick={handleLogout}>
   <Icon as={TbLogout2} />
   Logout
 </Button>

@@ -9,16 +9,9 @@ function Profilepage() {
     const user = JSON.parse(localStorage.getItem('currentUser'));
 
     if (!isLoggedIn || !user) {
-        navigate('/loginpage');
+        navigate('/loginpage');                 
         return null;
     }
-
-    const handleLogout = () => {
-        localStorage.removeItem('isLoggedIn');
-        localStorage.removeItem('currentUser');
-        alert("Logging out!");
-        navigate('/loginpage');
-    };
 
     return (
         <Center minH="100vh" bg="gray.50">
@@ -56,11 +49,7 @@ function Profilepage() {
                                     <strong>Phone: </strong> <br /> {user.phone}
                                 </Text>
                             </Flex>
-                            <Center>
-                                <Button backgroundColor={"gray.600"} onClick={handleLogout}>
-                                    Logout
-                                </Button>
-                            </Center>
+                            
                         </Box>
                     </VStack>
                 </Box>
