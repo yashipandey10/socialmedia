@@ -97,7 +97,7 @@ function Loginpage() {
             <Container marginStart={0} marginBottom={0} marginEnd={0} marginTop={0}  padding={0} maxW="100vw"  position={'relative'} >
             
                 
-                <Image  objectFit={'fill'}  width={'100%'} height={'88%'} src={image} />
+                <Image  objectFit={'fill'}  width={'100%'} height={'80%'} src={image} />
 
             </Container>
         }

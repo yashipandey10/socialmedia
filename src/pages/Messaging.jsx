@@ -2,7 +2,10 @@ import React from 'react';
 
 function Messaging(){
     return (
-        <>Messaging</>
+           <div style={{ backgroundColor: '#1b262c', minHeight: '100vh'  }} margin={'0'} padding={'0'}>
+
+           </div>
+      
     )
 }
 

@@ -1,6 +1,7 @@
 import { useState , useEffect } from 'react';
-import { Card, Center, Container, Text, Input, Button, HStack } from "@chakra-ui/react"
+import { Card, Center, Container, Text, Input, Button, HStack ,Flex,IconButton} from "@chakra-ui/react"
 import { useNavigate } from 'react-router';
+import { GiTreeDoor } from "react-icons/gi";
 
 function Registerpage() {
     const [firstName, setFirstName] = useState('');
@@ -41,42 +42,47 @@ function Registerpage() {
     alert('Registration successful!');
     navigate('/loginpage');
     };
-   
+
 
     return (
-       <div >
-        <Center marginTop={'20'}  >
+       <div style={{ backgroundColor: '#1b262c', minHeight: '100vh'  }} margin={'0'} padding={'0'}>
+        <Center padding={'10rem'}  >
             <Card.Root>
                 <Card.Body padding={5} shadow={'lg'}>
-                    <Text fontWeight={'bolder'} fontSize={'3xl'} textAlign={'center'}>Create Account</Text>
-                    <Text fontWeight={'bold'} color={'grey.500'} fontSize={'small'} textAlign={'center'}>Join Us Today!</Text>
+                    <Center>
+                     <Flex>
+                             <Text fontWeight={'bold'} color={'black'} padding={'2'} fontSize={'xl'} >EcoNet </Text> 
+                             <IconButton color={'black'} variant={'ghost'}   >  <GiTreeDoor size={10} /></IconButton>   
+                    </Flex>                      
+                    </Center>
+                    <Text fontWeight={'bolder'} color={'grey.500'} fontSize={'medium'} textAlign={'center'}>Connect. Act. Sustain!</Text>
                     <Container height={5} />
                     <HStack marginBottom={5}>
                         <Container>
-                            <Text fontSize={'small'} fontWeight={'light'}>First Name</Text>
+                            <Text fontSize={'medium'} fontWeight={'light'}>First Name</Text>
                             <Input size={'sm'} variant={'subtle'} placeholder="Enter your first name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
                         </Container>
                         <Container>
-                            <Text fontSize={'small'} fontWeight={'light'}>Last Name</Text>
+                            <Text fontSize={'medium'} fontWeight={'light'}>Last Name</Text>
                             <Input size={'sm'} variant={'subtle'} placeholder="Enter your last name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
                         </Container>
                     </HStack>
                     <HStack marginBottom={5}>
                         <Container >
-                            <Text fontSize={'small'} fontWeight={'light'}>Email</Text>
+                            <Text fontSize={'medium'} fontWeight={'light'}>Email</Text>
                             <Input size={'sm'} variant={'subtle'} placeholder="Enter your email" onChange={(e) => setEmail(e.target.value)} />
                         </Container>
                         <Container >
-                            <Text fontSize={'small'} fontWeight={'light'}>Phone</Text>
+                            <Text fontSize={'medium'} fontWeight={'light'}>Phone</Text>
                             <Input size={'sm'} variant={'subtle'} placeholder="Enter your phone number" onChange={(e) => setPhone(e.target.value)} />
                         </Container>
                     </HStack>
                     <Container marginBottom={5}>
-                        <Text fontSize={'small'} fontWeight={'light'}>Password</Text>
+                        <Text fontSize={'medium'} fontWeight={'light'}>Password</Text>
                         <Input size={'sm'} variant={'subtle'} type="password" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)} />
                     </Container>
                     <Container marginBottom={5}>
-                        <Text fontSize={'small'} fontWeight={'light'}>Confirm Password</Text>
+                        <Text fontSize={'medium'} fontWeight={'light'}>Confirm Password</Text>
                         <Input size={'sm'} variant={'subtle'} placeholder="Confirm password" onChange={(e) => setConfirmPassword(e.target.value)} />
                     </Container>
                     <Container marginBottom={5}>
