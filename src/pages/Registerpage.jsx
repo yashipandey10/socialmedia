@@ -27,9 +27,19 @@ function Registerpage() {
             firstName, lastName, email, phone, password,
         };
 
-        localStorage.setItem('user', JSON.stringify(userData));
-        alert('Registration successful!');
-        navigate('/loginpage');
+    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+    const userExists = existingUsers.some(user => user.email === email);
+    if (userExists) {
+        alert('A user with this email already exists!');
+        return;
+    }
+
+    existingUsers.push(userData);
+    localStorage.setItem('users', JSON.stringify(existingUsers));
+
+    alert('Registration successful!');
+    navigate('/loginpage');
     };
    
 

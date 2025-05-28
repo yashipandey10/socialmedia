@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 function Profilepage() {
     const navigate = useNavigate();
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    const user = JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(localStorage.getItem('currentUser'));
 
     if (!isLoggedIn || !user) {
         navigate('/loginpage');
@@ -14,6 +14,7 @@ function Profilepage() {
 
     const handleLogout = () => {
         localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('currentUser');
         alert("Logging out!");
         navigate('/loginpage');
     };
