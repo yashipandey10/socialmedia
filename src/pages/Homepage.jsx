@@ -1,6 +1,7 @@
 import {useState,useEffect} from "react";
 import PostCard from "../components/postcard";
  import Navbar from '../components/navbar'
+ import PostSkeleton from "../components/PostSkeleton";
 import Sidebar from '../components/sidebar'
 import {Flex,Stack,Container} from "@chakra-ui/react";
 import axios from 'axios'
@@ -37,11 +38,12 @@ const handleShowPopular = () => {
 }
 <Container marginTop={40}>
 <Stack>
-{
-        displayedPosts.map((post, key) => (
-               <PostCard post={post} key={key} />
-        ))
-    }
+
+ {posts === null
+    ? Array.from({ length: 3 }).map((_, i) => <PostSkeleton key={i} />)
+    : displayedPosts.map((post, key) => (
+        <PostCard post={post} key={key} />
+      ))}
 </Stack>
 </Container>
 </Flex>

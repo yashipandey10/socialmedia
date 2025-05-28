@@ -24,27 +24,8 @@ const currentUser = JSON.parse(localStorage.getItem('user'));
   };
 
     return (
-<Container
-  display="flex"
-  shadow="md"
-  padding="5"
-  marginBottom={0}
-  marginEnd={0}
-  marginStart={0}
-  fluid
-  bg="#255342"
-  position="sticky"
-  top="0"
-  zIndex="sticky"
->
-  <Flex
-    flexWrap="wrap"
-    align="center"
-    justify="space-between"
-    w="100%"
-    gap={4}
-  >
-    
+<Container display="flex" shadow="md" padding="5" marginBottom={0} marginEnd={0} marginStart={0} fluid bg="#255342" position="sticky" top="0" zIndex="sticky">
+  <Flex flexWrap="wrap" align="center" justify="space-between" w="100%" gap={4}  >
     <Flex align="center">
   <GiTreeDoor size="30px" color="white" />
   <Text fontWeight="bold" color="white" pl={2} fontSize="4xl">
@@ -53,21 +34,8 @@ const currentUser = JSON.parse(localStorage.getItem('user'));
 </Flex>
 
     
-    <InputGroup
-      w={{ base: '100%', md: '60%', lg: '40rem' }}
-      flex="1"
-      color="white"
-      startElement={<LuSearch color="grey" />}
-    >
-      <Input
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyDown={handleKeyDown}
-        size="lg"
-        borderRadius="full"
-        placeholder="Search profiles -> 'Enter the email id'"
-        _placeholder={{ color: 'gray.400' }}
-      />
+    <InputGroup maxW={{ base: '100%', md: '60%', lg: '50%' }}  marginLeft="64" flex="1" color="white" startElement={<LuSearch color="grey" />}  >
+      <Input value={query} onChange={(e) => setQuery(e.target.value)} onKeyDown={handleKeyDown}  size="lg"  borderRadius="full"  placeholder="Search profiles" _placeholder={{ color: 'gray.400' }}/>
     </InputGroup>
 
     <Box ml="auto" flexShrink={0}>
