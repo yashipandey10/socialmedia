@@ -12,6 +12,7 @@ import {  useNavigate } from "react-router-dom";
 import {useState} from "react";
 function Sidebar({ onShowPopular ,onShowAll }){
   
+    const navigate = useNavigate();
 
 
   const handleLogout = () => {
@@ -125,7 +126,7 @@ function Sidebar({ onShowPopular ,onShowAll }){
 </Button>
 
 
-<Button backgroundColor="#006f5e" color="#def8d6" variant="solid" w="275px" display="flex" alignItems="center" gap={2}>
+<Button backgroundColor="#006f5e" color="#def8d6" variant="solid" w="275px" display="flex" alignItems="center" gap={2} onClick={handleLogout}>
   <Icon as={TbLogout2} />
   Logout
 </Button>
